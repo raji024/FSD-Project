@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Event Registration Form</h2>
+        <form id="registrationForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="event">Event:</label>
+            <select id="event" name="event" required>
+                <option value="">Select an event</option>
+                <option value="Hackathon">Hackathon</option>
+                <option value="Workshop">Workshop</option>
+                <option value="Seminar">Seminar</option>
+            </select>
+
+            <!-- Hackathon topic section -->
+            <div id="topicSection" class="topic-section" style="display:none;">
+                <label for="topic">Hackathon Topic:</label>
+                <select id="topic" name="topic">
+                    <option value="">Select a Topic</option>
+                    <option value="AI & Machine Learning">AI & Machine Learning</option>
+                    <option value="Blockchain Technology">Blockchain Technology</option>
+                    <option value="Cybersecurity">Cybersecurity</option>
+                    <option value="IoT (Internet of Things)">IoT (Internet of Things)</option>
+                    <option value="Cloud Computing">Cloud Computing</option>
+                </select>
+            </div>
+
+            <!-- Payment Amount Section -->
+            <label for="payment">Payment Amount (in USD):</label>
+            <select id="payment" name="payment" required>
+                <option value="">Select an event first</option>
+            </select>
+
+            <button type="submit">Register</button>
+        </form>
+
+        <!-- Confirmation message -->
+        <div id="confirmationMessage" class="confirmation-message" style="display:none; margin-top: 20px;">
+            <h3>Registration Successful!</h3>
+            <p>All details have been sent to your email. Please check your inbox.</p>
+        </div>
+
+        <!-- Error message -->
+        <div id="errorMessage" class="error-message" style="display:none; margin-top: 20px;">
+            <h3>Error:</h3>
+            <p>This email is already registered. Please use a different email.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
